@@ -1,0 +1,56 @@
+//
+//  PrefixHeader.pch
+//  TestForUITableView
+//
+//  Created by liugang on 2020/8/20.
+//  Copyright © 2020 liugang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Macro.h"
+
+#pragma mark ---------- 第三方 --------
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <Masonry/Masonry.h>
+#import <SDWebImage/SDWebImage.h>
+#import "UIImageView+WebCache.h"
+#import "SDImageCache.h"
+
+#pragma mark ---------- 自定义lei------------
+#import "BaseNavigationViewController.h"
+#import "LQWkWebViewController.h"
+#import "ShareMenuView.h"
+#import "JXTAlertView.h"
+#import "SDCycleScrollView.h"
+#import "ChangeNAvBarViewController.h"
+#import "PersonCenterViewController.h"
+#import "LGLoginViewController.h"
+#import "KeyBroardViewController.h"
+#import "MSUtil.h"
+#pragma mark ---------- categary -------------
+#import "UINavigationBar+alpha.h"
+
+
+
+
+static inline BOOL isIPhoneXSeries() {
+    BOOL iPhoneXSeries = NO;
+    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
+        return iPhoneXSeries;
+    }
+    
+    if (@available(iOS 11.0, *)) {
+        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+        if (mainWindow.safeAreaInsets.bottom > 0.0) {
+            iPhoneXSeries = YES;
+        }
+    }
+    
+    return iPhoneXSeries;
+}
+
+
+
+#endif /* PrefixHeader_pch */

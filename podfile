@@ -1,0 +1,14 @@
+ platform :ios, '9.0'
+
+target 'LGTestProject' do
+ 
+    pod 'AFNetworking'
+    pod 'SDWebImage'
+    pod 'MBProgressHUD'
+    pod 'YYModel'
+    pod 'MJRefresh'
+    pod 'Masonry'
+    pod 'MJExtension'
+   
+
+end
