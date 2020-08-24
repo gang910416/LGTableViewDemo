@@ -1,18 +1,18 @@
 //
-//  TableViewLDViewController.m
+//  LGIndexesViewController.m
 //  LGTestProject
 //
 //  Created by liugang on 2020/8/24.
 //  Copyright © 2020 liugang. All rights reserved.
 //
 
-#import "TableViewLDViewController.h"
+#import "LGIndexesViewController.h"
 
-@interface TableViewLDViewController ()
+@interface LGIndexesViewController ()
 
 @end
 
-@implementation TableViewLDViewController
+@implementation LGIndexesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

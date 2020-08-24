@@ -1,7 +1,7 @@
 //
-//  TableViewLDViewController.h
+//  LGCategaryViewController.h
 //  LGTestProject
-//  类似美团外卖app两个tableView联动效果实现
+//
 //  Created by liugang on 2020/8/24.
 //  Copyright © 2020 liugang. All rights reserved.
 //
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableViewLDViewController : BaseViewController
+@interface LGCategaryViewController : BaseViewController
 
 @end
 

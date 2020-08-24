@@ -30,7 +30,7 @@
 #import "LGLoginViewController.h"
 #import "KeyBroardViewController.h"
 #import "LGDoubleChooseViewController.h"
-#import "TableViewLDViewController.h"
+
 
 
 #pragma mark ---------- categary -------------
