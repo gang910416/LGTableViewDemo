@@ -35,49 +35,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4FD2491F-D768-44E4-9386-6294D4AAF484"
-            shouldBeEnabled = "Yes"
+            uuid = "13BC6B64-C206-4CE9-BA1F-21800BB026A5"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LGTestProject/Common/Home&#xff08;&#x9996;&#x9875;&#xff09;/Controller/LGDoubleChooseViewController.m"
+            filePath = "LGTestProject/Common/TableView &#x7d22;&#x5f15;/LGIndexesViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-p__buttonClick:"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4FD2491F-D768-44E4-9386-6294D4AAF484 - e3d34a6460d8c1df"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LGDoubleChooseViewController p__buttonClick:]"
-                  moduleName = "LGTestProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liugang/Desktop/LGTableViewDemo/LGTestProject/Common/Home%EF%BC%88%E9%A6%96%E9%A1%B5%EF%BC%89/Controller/LGDoubleChooseViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "4FD2491F-D768-44E4-9386-6294D4AAF484 - ab268e1a1f276885"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__47-[LGDoubleChooseViewController p__buttonClick:]_block_invoke"
-                  moduleName = "LGTestProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liugang/Desktop/LGTableViewDemo/LGTestProject/Common/Home%EF%BC%88%E9%A6%96%E9%A1%B5%EF%BC%89/Controller/LGDoubleChooseViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
