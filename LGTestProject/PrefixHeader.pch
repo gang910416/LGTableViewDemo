@@ -10,6 +10,7 @@
 #define PrefixHeader_pch
 
 #import "Macro.h"
+#import "MSUtil.h"
 
 #pragma mark ---------- 第三方 --------
 #import <MBProgressHUD/MBProgressHUD.h>
@@ -28,7 +29,10 @@
 #import "PersonCenterViewController.h"
 #import "LGLoginViewController.h"
 #import "KeyBroardViewController.h"
-#import "MSUtil.h"
+#import "LGDoubleChooseViewController.h"
+#import "TableViewLDViewController.h"
+
+
 #pragma mark ---------- categary -------------
 #import "UINavigationBar+alpha.h"
 

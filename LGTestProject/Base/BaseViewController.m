@@ -83,6 +83,18 @@
 
 
 #pragma mark ---------------------- 创建导航栏按钮 -------------------
+- (void) createNavgationBarWithTitle:(NSString *)title isLeftBarButton:(BOOL)isLeftBarButton{
+   
+    if (isLeftBarButton) {
+          
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStyleDone target:self action:@selector(leftNavBarBtnClick:)];
+             self.navigationItem.leftBarButtonItem = item;
+      }else{
+           UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStyleDone target:self action:@selector(rightNavBarBtnClick:)];
+             self.navigationItem.rightBarButtonItem = item;
+      }
+}
+
 - (void) createNavgationBarWith:(NSString *)imageName isLeftBarButton:(BOOL)isLeftBarButton{
     if (isLeftBarButton) {
         

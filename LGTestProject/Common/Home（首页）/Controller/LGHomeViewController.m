@@ -9,7 +9,7 @@
 #import "LGHomeViewController.h"
 
 
-@interface LGHomeViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
+@interface LGHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIColor *navgatationColor;
@@ -29,8 +29,8 @@
     self.navigationItem.title = @"tableView 常见的案例";
 //    [self createNavgationBarWith:@"white_search" isLeftBarButton:YES];
 //    [self createNavgationBarWith:@"ewm" isLeftBarButton:NO];
-    self.dataSource = @[@"键盘事件监听",@"导航栏随tableView的滑动改变透明效果",@"table与collection的联动效果",@""];
-    self.classNames = @[@"KeyBroardViewController",@"ChangeNAvBarViewController",@"LGGuanlianViewController"];
+    self.dataSource = @[@"键盘事件监听",@"导航栏随tableView的滑动改变透明效果",@"table与collection的联动效果",@"tableView 多选效果",@"类似美团外卖app两个tableView联动效果"];
+    self.classNames = @[@"KeyBroardViewController",@"ChangeNAvBarViewController",@"LGGuanlianViewController",@"LGDoubleChooseViewController",@"TableViewLDViewController"];
     [self.view addSubview:self.tableView];
     
 }

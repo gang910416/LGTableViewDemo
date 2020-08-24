@@ -27,7 +27,7 @@ typedef void (^AlertClickBlock)(NSInteger buttonIndex);
 typedef void (^AlertBtnTitleClickBlock)(NSString *buttonTitle);
 
 /** 所有ViewController的基类 */
-@interface BaseViewController : UIViewController
+@interface BaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 /** 是否需要处理键盘弹出/收起的事件，默认NO   在ViewDidLoad前设置*/
 @property(nonatomic, assign) BOOL isNeedHandleKeyboard;
@@ -43,6 +43,7 @@ typedef void (^AlertBtnTitleClickBlock)(NSString *buttonTitle);
 /*
  * 创建导航栏按钮
  */
+- (void) createNavgationBarWithTitle:(NSString *)title isLeftBarButton:(BOOL)isLeftBarButton;
 - (void) createNavgationBarWith:(NSString *)imageName isLeftBarButton:(BOOL)isLeftBarButton;
 -(void) leftNavBarBtnClick:(UIBarButtonItem *)sender;
 -(void) rightNavBarBtnClick:(UIBarButtonItem *)sender;

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4C8CF2880A545C6AF0C397A5 /* libPods-LGTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CBEF9A72C9800CD7E15BD3 /* libPods-LGTestProject.a */; };
+		C2144ECC24F34A0D00393BE9 /* LGDoubleChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2144ECB24F34A0D00393BE9 /* LGDoubleChooseViewController.m */; };
+		C2144ECF24F3554C00393BE9 /* LGChooseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2144ECE24F3554C00393BE9 /* LGChooseTableViewCell.m */; };
+		C2144ED524F38F7E00393BE9 /* TableViewLDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2144ED424F38F7E00393BE9 /* TableViewLDViewController.m */; };
 		C2307B2F24F0E69C00829A10 /* ChangeNAvBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2307B2E24F0E69C00829A10 /* ChangeNAvBarViewController.m */; };
 		C2307B3524F0F2D800829A10 /* MSUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2307B3424F0F2D800829A10 /* MSUtil.m */; };
 		C2307B3824F0F4AF00829A10 /* LGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2307B3724F0F4AF00829A10 /* LGLoginViewController.m */; };
@@ -72,6 +75,12 @@
 /* Begin PBXFileReference section */
 		282A089C1B20264E1C7D8D42 /* Pods-LGTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGTestProject.debug.xcconfig"; path = "Target Support Files/Pods-LGTestProject/Pods-LGTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		6FF62AE9D7EF39A9CF6F1102 /* Pods-LGTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGTestProject.release.xcconfig"; path = "Target Support Files/Pods-LGTestProject/Pods-LGTestProject.release.xcconfig"; sourceTree = "<group>"; };
+		C2144ECA24F34A0D00393BE9 /* LGDoubleChooseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGDoubleChooseViewController.h; sourceTree = "<group>"; };
+		C2144ECB24F34A0D00393BE9 /* LGDoubleChooseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGDoubleChooseViewController.m; sourceTree = "<group>"; };
+		C2144ECD24F3554C00393BE9 /* LGChooseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGChooseTableViewCell.h; sourceTree = "<group>"; };
+		C2144ECE24F3554C00393BE9 /* LGChooseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGChooseTableViewCell.m; sourceTree = "<group>"; };
+		C2144ED324F38F7E00393BE9 /* TableViewLDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewLDViewController.h; sourceTree = "<group>"; };
+		C2144ED424F38F7E00393BE9 /* TableViewLDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewLDViewController.m; sourceTree = "<group>"; };
 		C2307B2D24F0E69C00829A10 /* ChangeNAvBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeNAvBarViewController.h; sourceTree = "<group>"; };
 		C2307B2E24F0E69C00829A10 /* ChangeNAvBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeNAvBarViewController.m; sourceTree = "<group>"; };
 		C2307B3324F0F2D800829A10 /* MSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUtil.h; sourceTree = "<group>"; };
@@ -427,6 +436,10 @@
 				C2307B3A24F0F7F100829A10 /* KeyBroardViewController.m */,
 				C2307B3C24F1010400829A10 /* LGGuanlianViewController.h */,
 				C2307B3D24F1010400829A10 /* LGGuanlianViewController.m */,
+				C2144ECA24F34A0D00393BE9 /* LGDoubleChooseViewController.h */,
+				C2144ECB24F34A0D00393BE9 /* LGDoubleChooseViewController.m */,
+				C2144ED324F38F7E00393BE9 /* TableViewLDViewController.h */,
+				C2144ED424F38F7E00393BE9 /* TableViewLDViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -446,6 +459,8 @@
 				C2307B4224F10A1800829A10 /* LGAutoRowHightCell.h */,
 				C2307B4324F10A1800829A10 /* LGAutoRowHightCell.m */,
 				C2307B4424F10A1800829A10 /* LGAutoRowHightCell.xib */,
+				C2144ECD24F3554C00393BE9 /* LGChooseTableViewCell.h */,
+				C2144ECE24F3554C00393BE9 /* LGChooseTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -671,6 +686,7 @@
 				C2D74E6824EE74B600952555 /* BaseViewController.m in Sources */,
 				C27A807924EFACBD00E2BB8B /* UIView+SDExtension.m in Sources */,
 				C27A805D24EF5C8100E2BB8B /* ShareMenuView.m in Sources */,
+				C2144ECF24F3554C00393BE9 /* LGChooseTableViewCell.m in Sources */,
 				C27A807E24EFACBD00E2BB8B /* TAAbstractDotView.m in Sources */,
 				C2307B3B24F0F7F100829A10 /* KeyBroardViewController.m in Sources */,
 				C2D74E7224EE74C100952555 /* UIBarButtonItem+addition.m in Sources */,
@@ -687,8 +703,10 @@
 				C2D74E6724EE74B600952555 /* BaseTabbarViewController.m in Sources */,
 				C2D74E1B24EE662200952555 /* main.m in Sources */,
 				C2D74E7324EE74C100952555 /* ItemView.m in Sources */,
+				C2144ED524F38F7E00393BE9 /* TableViewLDViewController.m in Sources */,
 				C27A806724EF977600E2BB8B /* JXTAlertController.m in Sources */,
 				C2D74E6924EE74B600952555 /* UIViewController+PopBlock.m in Sources */,
+				C2144ECC24F34A0D00393BE9 /* LGDoubleChooseViewController.m in Sources */,
 				C2D74E7424EE74C100952555 /* UIView+Extension.m in Sources */,
 				C27A807B24EFACBD00E2BB8B /* TADotView.m in Sources */,
 				C2D74E5C24EE74AF00952555 /* PersonCenterViewController.m in Sources */,
