@@ -37,6 +37,7 @@
 		C27A807E24EFACBD00E2BB8B /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A807424EFACBD00E2BB8B /* TAAbstractDotView.m */; };
 		C27A808124EFAFDE00E2BB8B /* UINavigationBar+alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A807F24EFAFDE00E2BB8B /* UINavigationBar+alpha.m */; };
 		C2BAD9AF24F3BE7D00869D3B /* LGIndexesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BAD9AE24F3BE7D00869D3B /* LGIndexesViewController.m */; };
+		C2BAD9B224F4B1FC00869D3B /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BAD9B124F4B1FC00869D3B /* SearchResultViewController.m */; };
 		C2D74E0A24EE661E00952555 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D74E0924EE661E00952555 /* AppDelegate.m */; };
 		C2D74E1324EE661F00952555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D74E1124EE661F00952555 /* Main.storyboard */; };
 		C2D74E1524EE662200952555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D74E1424EE662200952555 /* Assets.xcassets */; };
@@ -132,6 +133,8 @@
 		C27A808024EFAFDE00E2BB8B /* UINavigationBar+alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+alpha.h"; sourceTree = "<group>"; };
 		C2BAD9AD24F3BE7D00869D3B /* LGIndexesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGIndexesViewController.h; sourceTree = "<group>"; };
 		C2BAD9AE24F3BE7D00869D3B /* LGIndexesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGIndexesViewController.m; sourceTree = "<group>"; };
+		C2BAD9B024F4B1FC00869D3B /* SearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		C2BAD9B124F4B1FC00869D3B /* SearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		C2D74E0524EE661E00952555 /* LGTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LGTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D74E0824EE661E00952555 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2D74E0924EE661E00952555 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 			children = (
 				C2BAD9AD24F3BE7D00869D3B /* LGIndexesViewController.h */,
 				C2BAD9AE24F3BE7D00869D3B /* LGIndexesViewController.m */,
+				C2BAD9B024F4B1FC00869D3B /* SearchResultViewController.h */,
+				C2BAD9B124F4B1FC00869D3B /* SearchResultViewController.m */,
 			);
 			name = "TableView 索引";
 			path = "LGTestProject/Common/TableView 索引";
@@ -711,6 +716,7 @@
 				C2307B3E24F1010400829A10 /* LGGuanlianViewController.m in Sources */,
 				C2144EDC24F3A05B00393BE9 /* LGCategaryViewController.m in Sources */,
 				C27A808124EFAFDE00E2BB8B /* UINavigationBar+alpha.m in Sources */,
+				C2BAD9B224F4B1FC00869D3B /* SearchResultViewController.m in Sources */,
 				C27A807A24EFACBD00E2BB8B /* SDCollectionViewCell.m in Sources */,
 				C2D74E6824EE74B600952555 /* BaseViewController.m in Sources */,
 				C27A807924EFACBD00E2BB8B /* UIView+SDExtension.m in Sources */,
@@ -912,13 +918,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YTP3S84SN;
 				GCC_PREFIX_HEADER = LGTestProject/PrefixHeader.pch;
 				INFOPLIST_FILE = LGTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.LGTestProject.LGTestProject;
+				PRODUCT_BUNDLE_IDENTIFIER = test.LGTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -931,13 +938,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YTP3S84SN;
 				GCC_PREFIX_HEADER = LGTestProject/PrefixHeader.pch;
 				INFOPLIST_FILE = LGTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.LGTestProject.LGTestProject;
+				PRODUCT_BUNDLE_IDENTIFIER = test.LGTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
