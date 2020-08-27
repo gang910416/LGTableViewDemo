@@ -1,9 +1,9 @@
 //
-//  CollectionViewController.m
-//  瀑布流
+//  LGWaterfallViewController.m
+//  LGTestProject
 //
-//  Created by 戴永涛 on 2018/6/6.
-//  Copyright © 2018年 DaiYongtao. All rights reserved.
+//  Created by liugang on 2020/8/26.
+//  Copyright © 2020 liugang. All rights reserved.
 //
 
 #import "LGWaterfallViewController.h"
@@ -16,13 +16,16 @@
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
-@property (nonatomic, strong) NSArray *imageUrls;
+@property (nonatomic, strong) NSMutableArray *imageUrls;
 @property (nonatomic, strong) NSMutableArray *allImageUrls;
 @property (nonatomic, strong) LGWaterflowLayout *waterflowLayout;
 
 @property (nonatomic, strong) NSMutableArray *widths;
 @property (nonatomic, strong) NSMutableArray *heights;
 @property (nonatomic, strong) NSMutableArray *picImageArr;
+
+@property (nonatomic,assign) NSInteger currentPage;
+@property (nonatomic,strong) NSMutableArray *productDataSource;
 
 @end
 
@@ -31,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadData];
+    self.currentPage = 0;
     self.view.backgroundColor = RGBColor(161, 173, 175);
     // 设置布局
     LGWaterflowLayout *layout = [[LGWaterflowLayout alloc]init];
@@ -65,16 +69,33 @@
 
 // 加载新数据(下拉刷新)
 - (void)loadData {
-    // 重置所有图片urls数组
-    [self.allImageUrls removeAllObjects];
-    [self.allImageUrls addObjectsFromArray:self.imageUrls];
-    [self refresh:NO];
+    [[LGAFNetWorkManager shareManager] LGNetWorkingRequest:@"http://v.lehe.com/goods_category/get_goods" page:self.currentPage parameters:@{} succeed:^(NSError * _Nonnull error, id  _Nullable obj) {
+        
+        self.currentPage ++;
+        HigoList *list = (HigoList *)obj;
+        self.productDataSource = list.goods_list;
+        [self.imageUrls removeAllObjects];
+        for ( int i = 0 ;i < self.productDataSource.count ; i ++) {
+            GoodsModel *model = self.productDataSource[i];
+            [self.imageUrls addObject:model.main_image.image_original];
+        }
+        [self.allImageUrls removeAllObjects];
+        [self.allImageUrls addObjectsFromArray:self.imageUrls];
+        [self refresh:NO];
+        
+    } failure:^(NSError * _Nonnull error, id  _Nullable obj) {
+        
+    }];
+//    // 重置所有图片urls数组
+//    [self.allImageUrls removeAllObjects];
+//    [self.allImageUrls addObjectsFromArray:self.imageUrls];
+//    [self refresh:NO];
+    
 }
 
 // 加载更多数据(上拉刷新)
 - (void)loadMoreData {
-    [self.allImageUrls addObjectsFromArray:self.imageUrls];
-    [self refresh:NO];
+    
 }
 
 - (void)refresh:(BOOL)isloadNewData {
@@ -158,17 +179,16 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     WaterFlowCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"WaterFlowCollectionViewCell" forIndexPath:indexPath];
     for (id subView in cell.contentView.subviews) {
-           if (subView){
-               [subView removeFromSuperview];
-           }
+        if (subView){
+            [subView removeFromSuperview];
         }
+    }
     if (self.picImageArr.count > 0) {
         cell.imageView.image = self.picImageArr[indexPath.item];
-         cell.proTitle.text = @"标题";
     }
     // 注：非常关键的一句，由于cell的复用，imageView的frame可能和cell对不上，需要重新设置。
     cell.imageView.frame = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height - 50);
- 
+    
     cell.proTitle.frame = CGRectMake(5, cell.bounds.size.height - 45, cell.bounds.size.width - 10, 21);
     return cell;
 }
@@ -205,11 +225,20 @@
     }
     return _allImageUrls;
 }
+- (NSMutableArray *)productDataSource
+{
+    if (_productDataSource == nil) {
+        _productDataSource = [[NSMutableArray alloc] init];
+    }
+    return _productDataSource;
+}
 
-- (NSArray *)imageUrls {
+- (NSMutableArray *)imageUrls {
     
     if (!_imageUrls) {
-        _imageUrls = @[@"https://pic.lehe.com/pic/_o/b2/6c/659cdc1a5641d640e9ce52b91f18_758_758.cz.jpg",@"https://pic.lehe.com/pic/_o/5c/16/405aeb5fc4a61c538fe509363ee5_750_750.cz.jpg",@"https://pic.lehe.com/pic/_o/48/21/1574bf5503229e8d80358cd06397_750_750.cz.jpg",@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=234585439,3333907919&fm=26&gp=0.jpg",@"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2925221621,897648468&fm=26&gp=0.jpg",@"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2322675046,322562068&fm=26&gp=0.jpg",@"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1425896198,3673504788&fm=26&gp=0.jpg",@"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1595255292,359939224&fm=26&gp=0.jpg",@"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2106581209,668606458&fm=26&gp=0.jpg",@"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3641103117,2548708300&fm=26&gp=0.jpg",@"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3129475260,3293971430&fm=26&gp=0.jpg"];
+        //        _imageUrls = @[@"https://pic.lehe.com/pic/_o/b2/6c/659cdc1a5641d640e9ce52b91f18_758_758.cz.jpg",@"https://pic.lehe.com/pic/_o/5c/16/405aeb5fc4a61c538fe509363ee5_750_750.cz.jpg",@"https://pic.lehe.com/pic/_o/48/21/1574bf5503229e8d80358cd06397_750_750.cz.jpg",@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=234585439,3333907919&fm=26&gp=0.jpg",@"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2925221621,897648468&fm=26&gp=0.jpg",@"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2322675046,322562068&fm=26&gp=0.jpg",@"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1425896198,3673504788&fm=26&gp=0.jpg",@"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1595255292,359939224&fm=26&gp=0.jpg",@"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2106581209,668606458&fm=26&gp=0.jpg",@"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3641103117,2548708300&fm=26&gp=0.jpg",@"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3129475260,3293971430&fm=26&gp=0.jpg"];
+        
+        _imageUrls =  [[NSMutableArray alloc] init];
     }
     return _imageUrls;
 }

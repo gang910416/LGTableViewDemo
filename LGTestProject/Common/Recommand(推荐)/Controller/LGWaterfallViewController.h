@@ -1,9 +1,9 @@
 //
-//  CollectionViewController.h
-//  瀑布流
+//  LGWaterfallViewController.h
+//  LGTestProject
 //
-//  Created by 戴永涛 on 2018/6/6.
-//  Copyright © 2018年 DaiYongtao. All rights reserved.
+//  Created by liugang on 2020/8/26.
+//  Copyright © 2020 liugang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
