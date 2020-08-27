@@ -20,6 +20,13 @@
 		C2307B4124F1014300829A10 /* LGBtnScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2307B4024F1014300829A10 /* LGBtnScrollView.m */; };
 		C2307B4524F10A1800829A10 /* LGAutoRowHightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2307B4324F10A1800829A10 /* LGAutoRowHightCell.m */; };
 		C2307B4624F10A1800829A10 /* LGAutoRowHightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2307B4424F10A1800829A10 /* LGAutoRowHightCell.xib */; };
+		C232DD1E24F648CD00375FD7 /* NSString+CP.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD1A24F648CC00375FD7 /* NSString+CP.m */; };
+		C232DD1F24F648CD00375FD7 /* NSArray+CP.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD1B24F648CC00375FD7 /* NSArray+CP.m */; };
+		C232DD2A24F6555200375FD7 /* LGCollectionNomalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD2924F6555200375FD7 /* LGCollectionNomalViewController.m */; };
+		C232DD2E24F655A500375FD7 /* NomalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD2C24F655A500375FD7 /* NomalCollectionViewCell.m */; };
+		C232DD3524F7411000375FD7 /* WaterFlowCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD3424F7411000375FD7 /* WaterFlowCollectionViewCell.m */; };
+		C232DD3824F783E600375FD7 /* LGWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD3724F783E600375FD7 /* LGWaterflowLayout.m */; };
+		C232DD3B24F7881200375FD7 /* LGWaterfallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD3A24F7881200375FD7 /* LGWaterfallViewController.m */; };
 		C27A804424EF59AA00E2BB8B /* LGNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A804324EF59AA00E2BB8B /* LGNewsViewController.m */; };
 		C27A804724EF5A1000E2BB8B /* LQWkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A804624EF5A1000E2BB8B /* LQWkWebViewController.m */; };
 		C27A805D24EF5C8100E2BB8B /* ShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A805824EF5C8100E2BB8B /* ShareMenuView.m */; };
@@ -101,6 +108,20 @@
 		C2307B4224F10A1800829A10 /* LGAutoRowHightCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGAutoRowHightCell.h; sourceTree = "<group>"; };
 		C2307B4324F10A1800829A10 /* LGAutoRowHightCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGAutoRowHightCell.m; sourceTree = "<group>"; };
 		C2307B4424F10A1800829A10 /* LGAutoRowHightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LGAutoRowHightCell.xib; sourceTree = "<group>"; };
+		C232DD1A24F648CC00375FD7 /* NSString+CP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CP.m"; sourceTree = "<group>"; };
+		C232DD1B24F648CC00375FD7 /* NSArray+CP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CP.m"; sourceTree = "<group>"; };
+		C232DD1C24F648CC00375FD7 /* NSArray+CP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CP.h"; sourceTree = "<group>"; };
+		C232DD1D24F648CD00375FD7 /* NSString+CP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CP.h"; sourceTree = "<group>"; };
+		C232DD2824F6555200375FD7 /* LGCollectionNomalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGCollectionNomalViewController.h; sourceTree = "<group>"; };
+		C232DD2924F6555200375FD7 /* LGCollectionNomalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGCollectionNomalViewController.m; sourceTree = "<group>"; };
+		C232DD2B24F655A500375FD7 /* NomalCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NomalCollectionViewCell.h; sourceTree = "<group>"; };
+		C232DD2C24F655A500375FD7 /* NomalCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NomalCollectionViewCell.m; sourceTree = "<group>"; };
+		C232DD3324F7411000375FD7 /* WaterFlowCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowCollectionViewCell.h; sourceTree = "<group>"; };
+		C232DD3424F7411000375FD7 /* WaterFlowCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowCollectionViewCell.m; sourceTree = "<group>"; };
+		C232DD3624F783E600375FD7 /* LGWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGWaterflowLayout.h; sourceTree = "<group>"; };
+		C232DD3724F783E600375FD7 /* LGWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGWaterflowLayout.m; sourceTree = "<group>"; };
+		C232DD3924F7881200375FD7 /* LGWaterfallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGWaterfallViewController.h; sourceTree = "<group>"; };
+		C232DD3A24F7881200375FD7 /* LGWaterfallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGWaterfallViewController.m; sourceTree = "<group>"; };
 		C27A804224EF59AA00E2BB8B /* LGNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGNewsViewController.h; sourceTree = "<group>"; };
 		C27A804324EF59AA00E2BB8B /* LGNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGNewsViewController.m; sourceTree = "<group>"; };
 		C27A804524EF5A1000E2BB8B /* LQWkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQWkWebViewController.h; sourceTree = "<group>"; };
@@ -393,6 +414,10 @@
 			children = (
 				C2D74E4C24EE74AE00952555 /* RecommandViewController.h */,
 				C2D74E4B24EE74AE00952555 /* RecommandViewController.m */,
+				C232DD2824F6555200375FD7 /* LGCollectionNomalViewController.h */,
+				C232DD2924F6555200375FD7 /* LGCollectionNomalViewController.m */,
+				C232DD3924F7881200375FD7 /* LGWaterfallViewController.h */,
+				C232DD3A24F7881200375FD7 /* LGWaterfallViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -400,6 +425,8 @@
 		C2D74E4D24EE74AE00952555 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C232DD3624F783E600375FD7 /* LGWaterflowLayout.h */,
+				C232DD3724F783E600375FD7 /* LGWaterflowLayout.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -407,6 +434,10 @@
 		C2D74E4E24EE74AE00952555 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C232DD2B24F655A500375FD7 /* NomalCollectionViewCell.h */,
+				C232DD2C24F655A500375FD7 /* NomalCollectionViewCell.m */,
+				C232DD3324F7411000375FD7 /* WaterFlowCollectionViewCell.h */,
+				C232DD3424F7411000375FD7 /* WaterFlowCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -518,6 +549,10 @@
 		C2D74E6B24EE74C100952555 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C232DD1C24F648CC00375FD7 /* NSArray+CP.h */,
+				C232DD1B24F648CC00375FD7 /* NSArray+CP.m */,
+				C232DD1D24F648CD00375FD7 /* NSString+CP.h */,
+				C232DD1A24F648CC00375FD7 /* NSString+CP.m */,
 				C27A808024EFAFDE00E2BB8B /* UINavigationBar+alpha.h */,
 				C27A807F24EFAFDE00E2BB8B /* UINavigationBar+alpha.m */,
 				C2D74E6C24EE74C100952555 /* UIBarButtonItem+addition.m */,
@@ -714,6 +749,7 @@
 				C2307B3524F0F2D800829A10 /* MSUtil.m in Sources */,
 				C27A805F24EF5C8100E2BB8B /* ShareItemCollectionViewCell.m in Sources */,
 				C2307B3E24F1010400829A10 /* LGGuanlianViewController.m in Sources */,
+				C232DD2E24F655A500375FD7 /* NomalCollectionViewCell.m in Sources */,
 				C2144EDC24F3A05B00393BE9 /* LGCategaryViewController.m in Sources */,
 				C27A808124EFAFDE00E2BB8B /* UINavigationBar+alpha.m in Sources */,
 				C2BAD9B224F4B1FC00869D3B /* SearchResultViewController.m in Sources */,
@@ -724,9 +760,11 @@
 				C2144ECF24F3554C00393BE9 /* LGChooseTableViewCell.m in Sources */,
 				C27A807E24EFACBD00E2BB8B /* TAAbstractDotView.m in Sources */,
 				C2307B3B24F0F7F100829A10 /* KeyBroardViewController.m in Sources */,
+				C232DD3B24F7881200375FD7 /* LGWaterfallViewController.m in Sources */,
 				C2D74E7224EE74C100952555 /* UIBarButtonItem+addition.m in Sources */,
 				C2307B4124F1014300829A10 /* LGBtnScrollView.m in Sources */,
 				C2D74E0A24EE661E00952555 /* AppDelegate.m in Sources */,
+				C232DD3824F783E600375FD7 /* LGWaterflowLayout.m in Sources */,
 				C27A807D24EFACBD00E2BB8B /* TAAnimatedDotView.m in Sources */,
 				C27A804724EF5A1000E2BB8B /* LQWkWebViewController.m in Sources */,
 				C27A807824EFACBD00E2BB8B /* SDCycleScrollView.m in Sources */,
@@ -734,9 +772,12 @@
 				C27A807C24EFACBD00E2BB8B /* TAPageControl.m in Sources */,
 				C2307B2F24F0E69C00829A10 /* ChangeNAvBarViewController.m in Sources */,
 				C27A806424EF642400E2BB8B /* JXTAlertView.m in Sources */,
+				C232DD3524F7411000375FD7 /* WaterFlowCollectionViewCell.m in Sources */,
+				C232DD2A24F6555200375FD7 /* LGCollectionNomalViewController.m in Sources */,
 				C27A804424EF59AA00E2BB8B /* LGNewsViewController.m in Sources */,
 				C2D74E6724EE74B600952555 /* BaseTabbarViewController.m in Sources */,
 				C2D74E1B24EE662200952555 /* main.m in Sources */,
+				C232DD1F24F648CD00375FD7 /* NSArray+CP.m in Sources */,
 				C2D74E7324EE74C100952555 /* ItemView.m in Sources */,
 				C2144EDF24F3A07300393BE9 /* LGProductsViewController.m in Sources */,
 				C2BAD9AF24F3BE7D00869D3B /* LGIndexesViewController.m in Sources */,
@@ -746,6 +787,7 @@
 				C2D74E7424EE74C100952555 /* UIView+Extension.m in Sources */,
 				C27A807B24EFACBD00E2BB8B /* TADotView.m in Sources */,
 				C2D74E5C24EE74AF00952555 /* PersonCenterViewController.m in Sources */,
+				C232DD1E24F648CD00375FD7 /* NSString+CP.m in Sources */,
 				C2D74E5D24EE74AF00952555 /* LGHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

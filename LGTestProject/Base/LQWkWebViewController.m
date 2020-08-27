@@ -12,7 +12,7 @@
 static void *WKWebBrowserContext = &WKWebBrowserContext;
 @interface LQWkWebViewController ()<WKUIDelegate,WKNavigationDelegate>
 @property (nonatomic,strong) WKWebView *contentWebView;
-@property(nonatomic,strong)UIProgressView *progressView;//进度条
+@property(nonatomic,strong)UIProgressView *progressView;//进度条 
 @end
 
 @implementation LQWkWebViewController

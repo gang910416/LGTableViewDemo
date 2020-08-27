@@ -30,8 +30,8 @@
 #import "LGLoginViewController.h"
 #import "KeyBroardViewController.h"
 #import "LGDoubleChooseViewController.h"
-
-
+#import "LGWaterfallViewController.h"
+#import "LGCollectionNomalViewController.h"
 
 #pragma mark ---------- categary -------------
 #import "UINavigationBar+alpha.h"

@@ -9,6 +9,7 @@ target 'LGTestProject' do
     pod 'MJRefresh'
     pod 'Masonry'
     pod 'MJExtension'
-   
+   pod 'GSKStretchyHeaderView'
+   pod 'CHTCollectionViewWaterfallLayout'
 
 end

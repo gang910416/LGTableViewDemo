@@ -9,6 +9,13 @@
 #ifndef Macro_h
 #define Macro_h
 
+
+typedef enum {
+    VerticalType,   //垂直 : 固定列数，高度不固定，高度随着图片宽度决定。
+    HorizontalType  //水平 : 高度固定，宽度不固定，宽度随着图片高度决定。
+} DirectionType; //瀑布流类型
+
+
 #define LGThemeColor ([UIColor colorWithRed:252.0/255.0 green:132.0/255.0 blue:46.0/255.0 alpha:1.0])
 
 #define LGTintColor [UIColor whiteColor]
@@ -49,5 +56,8 @@
 
 
 #define WS(weakSelf) __weak __typeof(&*self)weakSelf = self;
+
+
+
 
 #endif /* Macro_h */

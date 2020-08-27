@@ -83,7 +83,7 @@
 
 
 -(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didScrollToIndex:(NSInteger)index{
-    NSLog(@"index = %ld",index);
+    
 }
 
 
