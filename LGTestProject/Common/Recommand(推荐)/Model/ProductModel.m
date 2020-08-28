@@ -8,6 +8,13 @@
 
 #import "ProductModel.h"
 
+@implementation FirstImage
+
+@end
+
+@implementation SecondImage
+
+@end
 
 @implementation ThirdImage
 
@@ -16,7 +23,16 @@
 @implementation Address
 
 @end
+
+@implementation BannerImage
+
+@end
+
 @implementation HigoList
+
+@end
+
+@implementation CategoryModel
 
 @end
 

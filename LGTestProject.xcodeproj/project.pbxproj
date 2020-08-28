@@ -29,6 +29,7 @@
 		C232DD3B24F7881200375FD7 /* LGWaterfallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD3A24F7881200375FD7 /* LGWaterfallViewController.m */; };
 		C232DD3E24F7B3EC00375FD7 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD3D24F7B3EC00375FD7 /* ProductModel.m */; };
 		C232DD4124F7B76A00375FD7 /* LGAFNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD4024F7B76A00375FD7 /* LGAFNetWorkManager.m */; };
+		C232DD4624F89E3A00375FD7 /* GoodsHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD4524F89E3A00375FD7 /* GoodsHeaderCell.m */; };
 		C27A804424EF59AA00E2BB8B /* LGNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A804324EF59AA00E2BB8B /* LGNewsViewController.m */; };
 		C27A804724EF5A1000E2BB8B /* LQWkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A804624EF5A1000E2BB8B /* LQWkWebViewController.m */; };
 		C27A805D24EF5C8100E2BB8B /* ShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A805824EF5C8100E2BB8B /* ShareMenuView.m */; };
@@ -128,6 +129,8 @@
 		C232DD3D24F7B3EC00375FD7 /* ProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductModel.m; sourceTree = "<group>"; };
 		C232DD3F24F7B76A00375FD7 /* LGAFNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGAFNetWorkManager.h; sourceTree = "<group>"; };
 		C232DD4024F7B76A00375FD7 /* LGAFNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGAFNetWorkManager.m; sourceTree = "<group>"; };
+		C232DD4424F89E3A00375FD7 /* GoodsHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsHeaderCell.h; sourceTree = "<group>"; };
+		C232DD4524F89E3A00375FD7 /* GoodsHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsHeaderCell.m; sourceTree = "<group>"; };
 		C27A804224EF59AA00E2BB8B /* LGNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGNewsViewController.h; sourceTree = "<group>"; };
 		C27A804324EF59AA00E2BB8B /* LGNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGNewsViewController.m; sourceTree = "<group>"; };
 		C27A804524EF5A1000E2BB8B /* LQWkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQWkWebViewController.h; sourceTree = "<group>"; };
@@ -448,6 +451,8 @@
 				C232DD2C24F655A500375FD7 /* NomalCollectionViewCell.m */,
 				C232DD3324F7411000375FD7 /* WaterFlowCollectionViewCell.h */,
 				C232DD3424F7411000375FD7 /* WaterFlowCollectionViewCell.m */,
+				C232DD4424F89E3A00375FD7 /* GoodsHeaderCell.h */,
+				C232DD4524F89E3A00375FD7 /* GoodsHeaderCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -796,6 +801,7 @@
 				C27A806724EF977600E2BB8B /* JXTAlertController.m in Sources */,
 				C2D74E6924EE74B600952555 /* UIViewController+PopBlock.m in Sources */,
 				C2144ECC24F34A0D00393BE9 /* LGDoubleChooseViewController.m in Sources */,
+				C232DD4624F89E3A00375FD7 /* GoodsHeaderCell.m in Sources */,
 				C2D74E7424EE74C100952555 /* UIView+Extension.m in Sources */,
 				C27A807B24EFACBD00E2BB8B /* TADotView.m in Sources */,
 				C2D74E5C24EE74AF00952555 /* PersonCenterViewController.m in Sources */,

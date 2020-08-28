@@ -10,6 +10,7 @@
 #import <SDWebImage/SDWebImageManager.h>
 #import <MJRefresh/MJRefresh.h>
 #import "WaterFlowCollectionViewCell.h"
+#import "GoodsHeaderCell.h"
 #import "LGWaterflowLayout.h"
 
 @interface LGWaterfallViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -19,7 +20,7 @@
 @property (nonatomic, strong) NSMutableArray *imageUrls;
 @property (nonatomic, strong) NSMutableArray *allImageUrls;
 @property (nonatomic, strong) LGWaterflowLayout *waterflowLayout;
-
+@property (nonatomic,copy)   NSString *firstImageURL;
 @property (nonatomic, strong) NSMutableArray *widths;
 @property (nonatomic, strong) NSMutableArray *heights;
 @property (nonatomic, strong) NSMutableArray *picImageArr;
@@ -28,6 +29,10 @@
 @property (nonatomic,strong) NSMutableArray *productDataSource;
 
 @end
+
+static NSString *identyfy = @"WaterFlowCollectionViewCell";
+static NSString *identyfy1 = @"GoodsHeaderCell";
+
 
 @implementation LGWaterfallViewController
 
@@ -58,12 +63,13 @@
     [self.collectionView.mj_header beginRefreshing];
     
     self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [weakSelf loadMoreData];
+        //        [weakSelf loadMoreData];
         [weakSelf.collectionView.mj_footer endRefreshing];
     }];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    [self.collectionView registerClass:[WaterFlowCollectionViewCell class] forCellWithReuseIdentifier:@"WaterFlowCollectionViewCell"];
+    [self.collectionView registerClass:[WaterFlowCollectionViewCell class] forCellWithReuseIdentifier:identyfy];
+    [self.collectionView registerClass:[GoodsHeaderCell class] forCellWithReuseIdentifier:identyfy1];
     [self.view addSubview:self.collectionView];
 }
 
@@ -74,7 +80,9 @@
         self.currentPage ++;
         HigoList *list = (HigoList *)obj;
         self.productDataSource = list.goods_list;
+        self.firstImageURL = list.banner.banner_pic.image_original;
         [self.imageUrls removeAllObjects];
+        [self.imageUrls addObject:self.firstImageURL];
         for ( int i = 0 ;i < self.productDataSource.count ; i ++) {
             GoodsModel *model = self.productDataSource[i];
             [self.imageUrls addObject:model.main_image.image_original];
@@ -86,15 +94,37 @@
     } failure:^(NSError * _Nonnull error, id  _Nullable obj) {
         
     }];
-//    // 重置所有图片urls数组
-//    [self.allImageUrls removeAllObjects];
-//    [self.allImageUrls addObjectsFromArray:self.imageUrls];
-//    [self refresh:NO];
+    //    // 重置所有图片urls数组
+    //    [self.allImageUrls removeAllObjects];
+    //    [self.allImageUrls addObjectsFromArray:self.imageUrls];
+    //    [self refresh:NO];
     
 }
 
-// 加载更多数据(上拉刷新)
-- (void)loadMoreData {
+// 上拉加载更多
+- (void)loadMoreData
+{
+    __weak typeof(self)weakSelf = self;
+    [[LGAFNetWorkManager shareManager] LGNetWorkingRequest:@"http://v.lehe.com/goods_category/get_goods" page:self.currentPage parameters:@{} succeed:^(NSError * _Nonnull error, id  _Nullable obj) {
+        [weakSelf.collectionView.mj_footer endRefreshing];
+        HigoList *list = (HigoList *)obj;
+        NSMutableArray *indexpaths = [[NSMutableArray alloc] init];
+        NSInteger index = [weakSelf.collectionView numberOfItemsInSection:0];
+        self.currentPage ++;
+        for (GoodsModel *model in list.goods_list) {
+            [weakSelf.productDataSource addObject:model];
+            NSIndexPath *indexpath = [NSIndexPath indexPathForItem:index inSection:0];
+            index++;
+            [indexpaths addObject:indexpath];
+        }
+        [weakSelf.collectionView insertItemsAtIndexPaths:indexpaths];
+        
+        
+        
+    } failure:^(NSError *err, id obj) {
+        
+        // error
+    }];
     
 }
 
@@ -177,20 +207,53 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    WaterFlowCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"WaterFlowCollectionViewCell" forIndexPath:indexPath];
-    for (id subView in cell.contentView.subviews) {
-        if (subView){
-            [subView removeFromSuperview];
-        }
+    NSString *ID = nil;
+    if (indexPath.item == 0) {
+        ID = identyfy1;
     }
-    if (self.picImageArr.count > 0) {
-        cell.imageView.image = self.picImageArr[indexPath.item];
+    else
+    {
+        ID = identyfy;
     }
-    // 注：非常关键的一句，由于cell的复用，imageView的frame可能和cell对不上，需要重新设置。
-    cell.imageView.frame = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height - 50);
     
-    cell.proTitle.frame = CGRectMake(5, cell.bounds.size.height - 45, cell.bounds.size.width - 10, 21);
-    return cell;
+    if (indexPath.item == 0) {
+        GoodsHeaderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+        for (id subView in cell.contentView.subviews) {
+            if (subView){
+                [subView removeFromSuperview];
+            }
+        }
+        cell.imageView.image = self.picImageArr[indexPath.item];
+        // 注：非常关键的一句，由于cell的复用，imageView的frame可能和cell对不上，需要重新设置。
+        cell.imageView.frame = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height);
+        return cell;
+    }else{
+        
+        NSLog(@"indexPath.item = %ld",(long)indexPath.item);
+        WaterFlowCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+        for (id subView in cell.contentView.subviews) {
+            if (subView){
+                [subView removeFromSuperview];
+            }
+        }
+        GoodsModel *goods = self.productDataSource[indexPath.item - 1];
+        if (self.picImageArr.count > 0) {
+            cell.imageView.image = self.picImageArr[indexPath.item];
+            cell.proTitle.text = goods.goods_name;
+        }
+        // 注：非常关键的一句，由于cell的复用，imageView的frame可能和cell对不上，需要重新设置。
+        cell.imageView.frame = CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height - 50);
+        
+        cell.proTitle.frame = CGRectMake(5, cell.bounds.size.height - 45, cell.bounds.size.width - 10, 21);
+        return cell;
+    }
+    
+    
+}
+
+- (void)configure:(WaterFlowCollectionViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 #pragma  mark --------------------------- 懒加载  --------------------------

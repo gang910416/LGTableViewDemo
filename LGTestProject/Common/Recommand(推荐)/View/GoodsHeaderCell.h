@@ -1,8 +1,8 @@
 //
-//  WaterFlowCollectionViewCell.h
+//  GoodsHeaderCell.h
 //  LGTestProject
 //
-//  Created by liugang on 2020/8/27.
+//  Created by liugang on 2020/8/28.
 //  Copyright © 2020 liugang. All rights reserved.
 //
 
@@ -10,10 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WaterFlowCollectionViewCell : UICollectionViewCell
+@interface GoodsHeaderCell : UICollectionViewCell
 @property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UILabel *proTitle;
-
 @end
 
 NS_ASSUME_NONNULL_END
