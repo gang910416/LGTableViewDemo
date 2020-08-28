@@ -54,7 +54,7 @@
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [HigoList mj_setupObjectClassInArray:^NSDictionary *{
-            return @{@"goods_list":@"GoodsModel"};
+            return @{@"goods_list":@"GoodsModel",@"banner":@"BannerImage"};
         }];
          HigoList *list =  [HigoList mj_objectWithKeyValues:[responseObject objectForKey:@"data"]];
         if (succeedBlock) {

@@ -75,14 +75,18 @@ static NSString *identyfy1 = @"GoodsHeaderCell";
 
 // 加载新数据(下拉刷新)
 - (void)loadData {
+    
+    [self showHUDToWindowMessage:@"加载中..."];
     [[LGAFNetWorkManager shareManager] LGNetWorkingRequest:@"http://v.lehe.com/goods_category/get_goods" page:self.currentPage parameters:@{} succeed:^(NSError * _Nonnull error, id  _Nullable obj) {
-        
+        [self removeHUD];
         self.currentPage ++;
         HigoList *list = (HigoList *)obj;
         self.productDataSource = list.goods_list;
         self.firstImageURL = list.banner.banner_pic.image_original;
         [self.imageUrls removeAllObjects];
-        [self.imageUrls addObject:self.firstImageURL];
+        if (self.firstImageURL != nil ) {
+            [self.imageUrls addObject:self.firstImageURL];
+        }
         for ( int i = 0 ;i < self.productDataSource.count ; i ++) {
             GoodsModel *model = self.productDataSource[i];
             [self.imageUrls addObject:model.main_image.image_original];
@@ -92,7 +96,7 @@ static NSString *identyfy1 = @"GoodsHeaderCell";
         [self refresh:NO];
         
     } failure:^(NSError * _Nonnull error, id  _Nullable obj) {
-        
+         [self removeHUD];
     }];
     //    // 重置所有图片urls数组
     //    [self.allImageUrls removeAllObjects];

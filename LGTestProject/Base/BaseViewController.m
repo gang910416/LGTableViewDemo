@@ -265,6 +265,7 @@
     if (!self.hud) {
         self.hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
         self.hud.mode = MBProgressHUDModeText;
+//        self.hud.backgroundColor = UIColor.blackColor;
         if (msg==nil||[msg isEqualToString:@""]) {
             
         }else{
@@ -276,6 +277,7 @@
     if (!self.hud) {
         
         self.hud=[MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+
         if (msg==nil||[msg isEqualToString:@""]) {
             
         }else{
