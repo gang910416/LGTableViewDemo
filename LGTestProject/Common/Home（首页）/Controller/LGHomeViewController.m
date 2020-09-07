@@ -33,6 +33,12 @@
     self.classNames = @[@"KeyBroardViewController",@"LGDoubleChooseViewController",@"LGGuanlianViewController",@"ChangeNAvBarViewController",@"LGCategaryViewController",@"LGIndexesViewController"];
     [self.view addSubview:self.tableView];
     
+    [self showAlertInputViewWithTitle:@"更换手机号" message:@"" inputViewPavarTitleArray:@[@"输入手机号"] alertBtnBlock:^(NSInteger buttonIndex) {
+        
+    } alertBtnTitleBlock:^(NSString *buttonTitle) {
+        
+    }];
+    
 }
 
 
