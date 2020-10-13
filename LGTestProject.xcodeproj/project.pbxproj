@@ -30,6 +30,8 @@
 		C232DD3E24F7B3EC00375FD7 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD3D24F7B3EC00375FD7 /* ProductModel.m */; };
 		C232DD4124F7B76A00375FD7 /* LGAFNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD4024F7B76A00375FD7 /* LGAFNetWorkManager.m */; };
 		C232DD4624F89E3A00375FD7 /* GoodsHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C232DD4524F89E3A00375FD7 /* GoodsHeaderCell.m */; };
+		C2782F57253595050049AA3A /* LGDouYinDHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2782F56253595050049AA3A /* LGDouYinDHViewController.m */; };
+		C2782F5A253595510049AA3A /* LGBallLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2782F59253595510049AA3A /* LGBallLoadView.m */; };
 		C27A804424EF59AA00E2BB8B /* LGNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A804324EF59AA00E2BB8B /* LGNewsViewController.m */; };
 		C27A804724EF5A1000E2BB8B /* LQWkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A804624EF5A1000E2BB8B /* LQWkWebViewController.m */; };
 		C27A805D24EF5C8100E2BB8B /* ShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A805824EF5C8100E2BB8B /* ShareMenuView.m */; };
@@ -131,6 +133,10 @@
 		C232DD4024F7B76A00375FD7 /* LGAFNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGAFNetWorkManager.m; sourceTree = "<group>"; };
 		C232DD4424F89E3A00375FD7 /* GoodsHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsHeaderCell.h; sourceTree = "<group>"; };
 		C232DD4524F89E3A00375FD7 /* GoodsHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsHeaderCell.m; sourceTree = "<group>"; };
+		C2782F55253595050049AA3A /* LGDouYinDHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGDouYinDHViewController.h; sourceTree = "<group>"; };
+		C2782F56253595050049AA3A /* LGDouYinDHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGDouYinDHViewController.m; sourceTree = "<group>"; };
+		C2782F58253595510049AA3A /* LGBallLoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGBallLoadView.h; sourceTree = "<group>"; };
+		C2782F59253595510049AA3A /* LGBallLoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGBallLoadView.m; sourceTree = "<group>"; };
 		C27A804224EF59AA00E2BB8B /* LGNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGNewsViewController.h; sourceTree = "<group>"; };
 		C27A804324EF59AA00E2BB8B /* LGNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGNewsViewController.m; sourceTree = "<group>"; };
 		C27A804524EF5A1000E2BB8B /* LQWkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQWkWebViewController.h; sourceTree = "<group>"; };
@@ -519,6 +525,8 @@
 				C2307B3D24F1010400829A10 /* LGGuanlianViewController.m */,
 				C2144ECA24F34A0D00393BE9 /* LGDoubleChooseViewController.h */,
 				C2144ECB24F34A0D00393BE9 /* LGDoubleChooseViewController.m */,
+				C2782F55253595050049AA3A /* LGDouYinDHViewController.h */,
+				C2782F56253595050049AA3A /* LGDouYinDHViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -540,6 +548,8 @@
 				C2307B4424F10A1800829A10 /* LGAutoRowHightCell.xib */,
 				C2144ECD24F3554C00393BE9 /* LGChooseTableViewCell.h */,
 				C2144ECE24F3554C00393BE9 /* LGChooseTableViewCell.m */,
+				C2782F58253595510049AA3A /* LGBallLoadView.h */,
+				C2782F59253595510049AA3A /* LGBallLoadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -759,6 +769,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2D74E5B24EE74AF00952555 /* RecommandViewController.m in Sources */,
+				C2782F57253595050049AA3A /* LGDouYinDHViewController.m in Sources */,
 				C2307B4524F10A1800829A10 /* LGAutoRowHightCell.m in Sources */,
 				C2307B3824F0F4AF00829A10 /* LGLoginViewController.m in Sources */,
 				C2307B3524F0F2D800829A10 /* MSUtil.m in Sources */,
@@ -787,6 +798,7 @@
 				C2D74E6A24EE74B600952555 /* BaseNavigationViewController.m in Sources */,
 				C27A807C24EFACBD00E2BB8B /* TAPageControl.m in Sources */,
 				C2307B2F24F0E69C00829A10 /* ChangeNAvBarViewController.m in Sources */,
+				C2782F5A253595510049AA3A /* LGBallLoadView.m in Sources */,
 				C27A806424EF642400E2BB8B /* JXTAlertView.m in Sources */,
 				C232DD4124F7B76A00375FD7 /* LGAFNetWorkManager.m in Sources */,
 				C232DD3524F7411000375FD7 /* WaterFlowCollectionViewCell.m in Sources */,

@@ -1,43 +1,37 @@
 //
-//  LGHomeViewController.m
-//  TestForUITableView
+//  LGDouYinDHViewController.m
+//  LGTestProject
 //
-//  Created by liugang on 2020/8/20.
+//  Created by liugang on 2020/10/13.
 //  Copyright © 2020 liugang. All rights reserved.
 //
 
-#import "LGHomeViewController.h"
+#import "LGDouYinDHViewController.h"
+#import "LGBallLoadView.h"
 
-
-@interface LGHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface LGDouYinDHViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIColor *navgatationColor;
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) NSArray *classNames;
-
-
-
+@property (nonatomic, strong) UIView                *loadingBgView;
+@property (nonatomic, strong) LGBallLoadView     *refreshLoadingView;
 @end
 
-@implementation LGHomeViewController
 
+@implementation LGDouYinDHViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = YES;
     self.navigationItem.title = @"tableView 常见的案例";
-//    [self createNavgationBarWith:@"white_search" isLeftBarButton:YES];
-//    [self createNavgationBarWith:@"ewm" isLeftBarButton:NO];
-    self.dataSource = @[@"键盘事件监听",@"tableView 多选效果",@"table与collection的联动效果",@"导航栏随tableView的滑动改变透明效果",@"类似美团外卖app两个tableView联动效果",@"tableView索引（通讯录）",@"抖音 动画效果合集"];
-    self.classNames = @[@"KeyBroardViewController",@"LGDoubleChooseViewController",@"LGGuanlianViewController",@"ChangeNAvBarViewController",@"LGCategaryViewController",@"LGIndexesViewController",@"LGDouYinDHViewController"];
-    [self.view addSubview:self.tableView];
     
-//    [self showAlertInputViewWithTitle:@"更换手机号" message:@"" inputViewPavarTitleArray:@[@"输入手机号"] alertBtnBlock:^(NSInteger buttonIndex) {
-//        
-//    } alertBtnTitleBlock:^(NSString *buttonTitle) {
-//        
-//    }];
+    //    [self createNavgationBarWith:@"white_search" isLeftBarButton:YES];
+    //    [self createNavgationBarWith:@"ewm" isLeftBarButton:NO];
+    self.dataSource = @[@"三个球旋转动画加载",@"点赞动画",@"视频加载动画",@"长按屏幕点赞动画"];
+    
+    [self.view addSubview:self.tableView];
     
 }
 
@@ -89,20 +83,34 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //取消选中效果
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-//    LQWkWebViewController *wkWebVc = [[LQWkWebViewController alloc]init];
-//    wkWebVc.urlStr = @"https://nba.sina.cn/?vt=4&pos=108";
-//    [self.navigationController pushViewController:wkWebVc animated:YES];
     
-    NSString *className = self.classNames[indexPath.row]; //classNames 字符串数组集
-       Class class = NSClassFromString(className);
-       if (class) {
-           BaseViewController *ctrl = class.new;
-           ctrl.title = self.dataSource[indexPath.row];
-           [self.navigationController pushViewController:ctrl animated:YES];
-       }
+    
+    switch (indexPath.row) {
+        case 0:
+            [self showBallLoadingView];
+            break;
+        case 1:
+            [self showBallLoadingView];
+            break;
+            case 2:
+            [self showBallLoadingView];
+            break;
+            case 3:
+            [self showBallLoadingView];
+            break;
+        default:
+            break;
+    }
     
 }
 
+-(void) showBallLoadingView{
+    self.refreshLoadingView = [LGBallLoadView loadingViewInView:self.view];
+       [self.refreshLoadingView startLoading];
+       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+           [self.refreshLoadingView stopAndDismissLoading];
+       });
+}
 
 #pragma  mark --------------------- 懒加载 ---------------------
 /**
@@ -122,7 +130,6 @@
     return _tableView;
     
 }
-
 
 
 @end

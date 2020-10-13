@@ -34,6 +34,7 @@
 #import "LGCollectionNomalViewController.h"
 #import "ProductModel.h"
 #import "LGAFNetWorkManager.h"
+#import "LGDouYinDHViewController.h"
 
 #pragma mark ---------- categary -------------
 #import "UINavigationBar+alpha.h"
