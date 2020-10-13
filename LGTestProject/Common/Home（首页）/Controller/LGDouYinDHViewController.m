@@ -8,7 +8,7 @@
 
 #import "LGDouYinDHViewController.h"
 #import "LGBallLoadView.h"
-
+#import "LGVideoLineLoadView.h"
 @interface LGDouYinDHViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSArray *classNames;
 @property (nonatomic, strong) UIView                *loadingBgView;
 @property (nonatomic, strong) LGBallLoadView     *refreshLoadingView;
+@property (nonatomic, strong) LGVideoLineLoadView     *videoLoadingView;
 @end
 
 
@@ -90,10 +91,10 @@
             [self showBallLoadingView];
             break;
         case 1:
-            [self showBallLoadingView];
+            [self showLineBallLoadingView];
             break;
             case 2:
-            [self showBallLoadingView];
+            [self showLineBallLoadingView];
             break;
             case 3:
             [self showBallLoadingView];
@@ -110,6 +111,10 @@
        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
            [self.refreshLoadingView stopAndDismissLoading];
        });
+}
+
+-(void) showLineBallLoadingView{
+   [LGVideoLineLoadView showLoadingInView:self.view withLineHeight:1];
 }
 
 #pragma  mark --------------------- 懒加载 ---------------------
