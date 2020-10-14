@@ -33,6 +33,8 @@
 		C2782F57253595050049AA3A /* LGDouYinDHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2782F56253595050049AA3A /* LGDouYinDHViewController.m */; };
 		C2782F5A253595510049AA3A /* LGBallLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2782F59253595510049AA3A /* LGBallLoadView.m */; };
 		C2782F5D2535AF730049AA3A /* LGVideoLineLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2782F5C2535AF730049AA3A /* LGVideoLineLoadView.m */; };
+		C2782F632535B2D80049AA3A /* GKDoubleLikeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2782F612535B2D70049AA3A /* GKDoubleLikeView.m */; };
+		C2782F642535B2D80049AA3A /* GKLikeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2782F622535B2D80049AA3A /* GKLikeView.m */; };
 		C27A804424EF59AA00E2BB8B /* LGNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A804324EF59AA00E2BB8B /* LGNewsViewController.m */; };
 		C27A804724EF5A1000E2BB8B /* LQWkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A804624EF5A1000E2BB8B /* LQWkWebViewController.m */; };
 		C27A805D24EF5C8100E2BB8B /* ShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A805824EF5C8100E2BB8B /* ShareMenuView.m */; };
@@ -140,6 +142,10 @@
 		C2782F59253595510049AA3A /* LGBallLoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGBallLoadView.m; sourceTree = "<group>"; };
 		C2782F5B2535AF730049AA3A /* LGVideoLineLoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGVideoLineLoadView.h; sourceTree = "<group>"; };
 		C2782F5C2535AF730049AA3A /* LGVideoLineLoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGVideoLineLoadView.m; sourceTree = "<group>"; };
+		C2782F5F2535B2D70049AA3A /* GKDoubleLikeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDoubleLikeView.h; sourceTree = "<group>"; };
+		C2782F602535B2D70049AA3A /* GKLikeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLikeView.h; sourceTree = "<group>"; };
+		C2782F612535B2D70049AA3A /* GKDoubleLikeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDoubleLikeView.m; sourceTree = "<group>"; };
+		C2782F622535B2D80049AA3A /* GKLikeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLikeView.m; sourceTree = "<group>"; };
 		C27A804224EF59AA00E2BB8B /* LGNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGNewsViewController.h; sourceTree = "<group>"; };
 		C27A804324EF59AA00E2BB8B /* LGNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGNewsViewController.m; sourceTree = "<group>"; };
 		C27A804524EF5A1000E2BB8B /* LQWkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQWkWebViewController.h; sourceTree = "<group>"; };
@@ -268,6 +274,17 @@
 			name = "Meituan(类似美团菜单)";
 			path = "LGTestProject/Common/Meituan(类似美团菜单)";
 			sourceTree = SOURCE_ROOT;
+		};
+		C2782F5E2535B2D70049AA3A /* GKLikeView */ = {
+			isa = PBXGroup;
+			children = (
+				C2782F5F2535B2D70049AA3A /* GKDoubleLikeView.h */,
+				C2782F602535B2D70049AA3A /* GKLikeView.h */,
+				C2782F612535B2D70049AA3A /* GKDoubleLikeView.m */,
+				C2782F622535B2D80049AA3A /* GKLikeView.m */,
+			);
+			path = GKLikeView;
+			sourceTree = "<group>";
 		};
 		C27A804824EF5A2700E2BB8B /* Tools */ = {
 			isa = PBXGroup;
@@ -544,6 +561,7 @@
 		C2D74E5A24EE74AE00952555 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2782F5E2535B2D70049AA3A /* GKLikeView */,
 				C2307B3F24F1014300829A10 /* LGBtnScrollView.h */,
 				C2307B4024F1014300829A10 /* LGBtnScrollView.m */,
 				C2307B4224F10A1800829A10 /* LGAutoRowHightCell.h */,
@@ -790,11 +808,13 @@
 				C27A805D24EF5C8100E2BB8B /* ShareMenuView.m in Sources */,
 				C2144ECF24F3554C00393BE9 /* LGChooseTableViewCell.m in Sources */,
 				C27A807E24EFACBD00E2BB8B /* TAAbstractDotView.m in Sources */,
+				C2782F632535B2D80049AA3A /* GKDoubleLikeView.m in Sources */,
 				C2307B3B24F0F7F100829A10 /* KeyBroardViewController.m in Sources */,
 				C232DD3B24F7881200375FD7 /* LGWaterfallViewController.m in Sources */,
 				C2D74E7224EE74C100952555 /* UIBarButtonItem+addition.m in Sources */,
 				C2307B4124F1014300829A10 /* LGBtnScrollView.m in Sources */,
 				C232DD3E24F7B3EC00375FD7 /* ProductModel.m in Sources */,
+				C2782F642535B2D80049AA3A /* GKLikeView.m in Sources */,
 				C2D74E0A24EE661E00952555 /* AppDelegate.m in Sources */,
 				C232DD3824F783E600375FD7 /* LGWaterflowLayout.m in Sources */,
 				C27A807D24EFACBD00E2BB8B /* TAAnimatedDotView.m in Sources */,

@@ -38,7 +38,8 @@ typedef enum {
 #define SCREEN_W  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_H  [UIScreen mainScreen].bounds.size.height
 
-
+// 适配比例
+#define ADAPTATIONRATIO     SCREEN_WIDTH / 750.0f
 //16进制颜色
 #define UICOLOR_RGB_Alpha(_color,_alpha) [UIColor colorWithRed:((_color>>16)&0xff)/255.0f green:((_color>>8)&0xff)/255.0f blue:(_color&0xff)/255.0f alpha:_alpha]
 #define Crm_Com_MaskColor  RGBA_COLOR(135, 135, 135, 0.4)

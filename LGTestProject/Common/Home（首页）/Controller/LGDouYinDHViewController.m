@@ -9,6 +9,8 @@
 #import "LGDouYinDHViewController.h"
 #import "LGBallLoadView.h"
 #import "LGVideoLineLoadView.h"
+#import "GKLikeView.h"
+#import "GKDoubleLikeView.h"
 @interface LGDouYinDHViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -91,7 +93,7 @@
             [self showBallLoadingView];
             break;
         case 1:
-            [self showLineBallLoadingView];
+            [self showLikeingView];
             break;
             case 2:
             [self showLineBallLoadingView];
@@ -115,6 +117,17 @@
 
 -(void) showLineBallLoadingView{
    [LGVideoLineLoadView showLoadingInView:self.view withLineHeight:1];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LGVideoLineLoadView hideLoadingInView:self.view];
+    });
+}
+
+-(void)showLikeingView{
+    GKLikeView *likeView = [[GKLikeView alloc]initWithFrame:CGRectMake(0, 0, 80, 80)];
+    likeView.center = self.view.center;
+//    likeView.backgroundColor = UIColor.redColor;
+    [likeView startAnimationWithIsLike:YES];
+    [self.view addSubview:likeView];
 }
 
 #pragma  mark --------------------- 懒加载 ---------------------

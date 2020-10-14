@@ -7,13 +7,15 @@
 //
 
 #import "LGVideoLineLoadView.h"
+
 #define GKLineLoadingDuration  0.75
-#define GKLineLoadingLineColor [UIColor whiteColor]
+#define GKLineLoadingLineColor [UIColor redColor]
 
 @implementation LGVideoLineLoadView
 
 + (void)showLoadingInView:(UIView *)view withLineHeight:(CGFloat)lineHeight {
     LGVideoLineLoadView *loadingView = [[LGVideoLineLoadView alloc] initWithFrame:view.frame lineHeight:lineHeight];
+    loadingView.backgroundColor = UIColor.redColor;
     [view addSubview:loadingView];
     [loadingView startLoading];
 }

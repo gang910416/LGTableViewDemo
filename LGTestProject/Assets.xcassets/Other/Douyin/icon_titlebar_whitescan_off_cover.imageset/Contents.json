@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "icon_titlebar_whitescan_off_cover~iphone.png",
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "icon_titlebar_whitescan_off_cover~iphone@2x.png",
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
